@@ -1,8 +1,12 @@
+html {
+	height: 100%;
+}
 body {
 	background-color: #FFF;
 	font-family: 'Helvetica';
 	margin: 0;
 	padding: 0;
+	height: 100%;
 }
 
 .sidenavbar {
@@ -30,7 +34,7 @@ body {
 	margin-left: 10px;
 }
 
-.sidenavbar .navitem {
+.navitem {
 	padding: 8px 8px 8px 32px;
 	text-decoration: none;
 	font-size: 25px;
@@ -38,11 +42,14 @@ body {
 	display: block;
 	margin-left: 35px;
 	transition: 0.3s;
+} .selected {
+	color: #FFFFFF;
+	text-decoration: underline;
 }
 
-.sidenavbar a:hover, .offcanvas a:focus{
+.sidenavbar a:hover{
 	color: #f1f1f1;
-}
+} 
 
 .navpic {
 	margin-left: 80px;
@@ -60,26 +67,35 @@ body {
 
 #main {
 	transition: margin-left .5s;
+	background-image: url("pics/school.png");
 	position: relative;
 	padding: 20px;
+	height: 100%;
 }
 
-.name {
+.container {
 	position: relative;
-	margin-left: 25%;
-	margin-top: 25%;
-	font-weight: 200;
-	font-size: 3.2em;
+	width: 100%;
+	height: 100%;
+} .about {
+	margin-left: 20%;
+	margin-top: 5%;
+	padding-top: 10%;
+	width: 50%;
+	height: 50%;
+	font-weight: 300;
+	font-size: 4.2em;
 	color: #52B0FF;
 }
 
-.selected {
-	color: #f1f1f1;
+#bio {
+	padding-top: 5%;
+	font-size: 20px;
+	color: #000000;
+
+
 }
 
-.unselected {
-	color: #818181;
-}
 .hidden {
 	display: none;
 }

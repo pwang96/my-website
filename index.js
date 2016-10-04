@@ -34,8 +34,7 @@ function closeNav() {
 }
 
 function changePage(currId) {
-	$("#home, #about, #projects, #resume, #contact").addClass("unselected");
-	currId.removeClass("unselected");
+	$("#about, #projects, #resume, #contact").removeClass("selected");
 	currId.addClass("selected");
 
 	var currContainer = currId.text().toLowerCase();
@@ -44,7 +43,7 @@ function changePage(currId) {
 }
 
 function bindNavItems(){
-	$("#home, #about, #projects, #resume, #contact").click(function() {
+	$("#about, #projects, #resume, #contact").click(function() {
 		changePage($(this));
 		closeNav();
 	}
