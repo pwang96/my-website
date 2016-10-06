@@ -1,5 +1,7 @@
 var toggle = false;
 var isOpen = false;
+var projects = ["measure", "newday", "deloitte", "clearcell"]
+var projOpen = ""
 
 $(document).ready(function(){
 	closeNav();
@@ -7,10 +9,9 @@ $(document).ready(function(){
 	closeNav();
 	});
 	bindNavItems();
-
+	bindHoverThumbs();
+	/*bindCloseBtn();*/
 });
-
-
 
 
 function toggleNav() {
@@ -42,10 +43,57 @@ function changePage(currId) {
 	$(".".concat(currContainer)).removeClass("hidden");
 }
 
-function bindNavItems(){
+function bindNavItems() {
 	$("#about, #projects, #resume, #contact").click(function() {
 		changePage($(this));
 		closeNav();
 	}
 	)
+}
+
+function hoverIn(i) {
+	return function() {
+		var currentOverlay = "#thumb-".concat(projects[i]);
+		$(currentOverlay.concat(" .thumb-overlay hidden")).removeClass("hidden");
+		$(currentOverlay.concat(" .thumb-overlay")).fadeTo(300, 0.75);
+	}
+}
+
+function hoverOut(i) {
+	return function() {
+		var currentOverlay = "#thumb-".concat(projects[i]);
+		$(currentOverlay.concat(" .thumb-overlay")).fadeTo(300, 0);
+		$(currentOverlay.concat(" .thumb-overlay")).addClass("hidden");
+	}
+}
+
+function thumbClicked(i) {
+	return function() {
+		projOpen = projects[i];
+		var currentProj = "#details-".concat(projOpen);
+		$(currentProj).removeClass("hidden");
+		$(currentProj).fadeTo(300, 1);
+		$(".page-overlay").removeClass("hidden");
+		$(".page-overlay").fadeTo(300, 0.8);
+	}
+}
+
+function bindHoverThumbs() {
+	for (var i=0; i<projects.length; i++) {
+		var currProj = "#thumb-".concat(projects[i]);
+		$(currProj).hover(hoverIn(i), hoverOut(i));
+		$(currProj).click(thumbClicked(i));
+	}
+}
+
+function closeBtnClicked() {
+	$(".page-overlay").fadeTo(300, 0);
+	$(".page-overlay").addClass("hidden");
+	$("#details-".concat(projOpen)).fadeTo(300, 0);
+	$("#details-".concat(projOpen)).addClass("hidden");
+	console.log(projOpen);
+}
+
+function bindCloseBtn() {
+	$("#closeBtn").click(closeBtnClicked());
 }

@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<link rel="stylesheet" href="index.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="icon" type="image/png" href="pics/favicon-96x96.png">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="index.js"> </script>
   <title>Peter Wang</title>
@@ -24,12 +26,12 @@
 	<div id="main">
 	  	<div class="container about">
 
-			<div class="name">
+			<div id="name">
 				Peter Wang
 			</div>
-			<div id="biopic">
-				<img src="pics/biopic.jpg"/>
-			</div>
+
+				<img id="biopic" src="pics/biopic.jpg"/>
+
 			<div id="bio">
 				<p>
 				Hi! I'm a sophomore computer engineer at the University of Maryland
@@ -41,10 +43,47 @@
 
 	  	<div class="container projects hidden">
 
-			<h1>
-				Peter Wang
-			</h1>
-	  		<h2> PROJECTS </h2>
+			<div id="projects-header">
+				Projects List
+			</div>
+			<div id="sort">
+				Sort by: 
+				<ul id="sortby">
+					<li> <a class="sortitem active" id="date-sort" href="#"> Date </a> </li>
+					<li> <a class="sortitem" id="type-sort" href="#"> Type </a> </li>
+					<li> <a class="sortitem" id="pop-sort" href="#"> Popularity </a> </li>
+				</ul>
+			</div>
+			<div id="projects-body">
+				<div class="thumb" id="thumb-measure">
+					<img src="pics/measure.png" class="thumb-pic"/>
+					<div class="thumb-overlay hidden">
+						<div class="title">MEASURE</div>
+						<div class="type">TECH</div>
+					</div>
+				</div>
+				<div class="thumb" id="thumb-newday">
+					<img src="pics/newday.png" class="thumb-pic"/>
+					<div class="thumb-overlay hidden">
+						<div class="title">NewDayUSA Case Competition</div>
+						<div class="type">BUSINESS</div>
+					</div>
+				</div>
+				<div class="thumb" id="thumb-deloitte">
+					<img src="pics/deloitte.png" class="thumb-pic"/>
+					<div class="thumb-overlay hidden">
+						<div class="title">Deloitte Case Competition</div>
+						<div class="type">BUSINESS</div>
+					</div>
+				</div>
+				<div class="thumb" id="thumb-clearcell">
+					<img src="pics/newday.png" class="thumb-pic"/>
+					<div class="thumb-overlay hidden">
+						<div class="title">ClearCell</div>
+						<div class="type">TECH</div>
+					</div>
+				</div>
+			</div>
 	  	</div>
 
 	  	<div class="container resume hidden">
@@ -70,6 +109,60 @@
 			</div>
 	  	</div>
 
+	  	<div class="page-overlay hidden" onclick="closeBtnClicked()"></div>
+	  	<div class="proj-details hidden" id="details-measure">
+	  		<i class="material-icons" id="closeBtn" onclick="closeBtnClicked()">
+	  			exit_to_app
+	  		</i>
+	  		<div class="details-pic">
+
+	  		</div>
+	  		<div class="details-links">
+	  		</div>
+	  		<div class="details-desc">
+	  		</div>
+	  	</div>
+	  	<div class="proj-details hidden" id="details-newday">
+	  		<i class="material-icons" id="closeBtn" onclick="closeBtnClicked()">
+	  			exit_to_app
+	  		</i>
+	  		<div class="details-pic">
+	  			<iframe id="newday-ppt" src="https://docs.google.com/presentation/d/16wC8z32yGyOW7hVouXUBy1-upZ1Pk5D3vfwSX4TkJyw/embed?start=false&loop=true&delayms=3000" frameborder="0" width="480" height="300" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+	  		</div>
+	  		<div class="details-links">
+	  			NewDayUSA Case Competition (2nd Place)
+	  		</div>
+	  		<div class="details-desc">
+	  			NewDayUSA, a Virginia-based mortgage housing lender, focused on
+	  			catering to veterans, holds an annual case competition, where winners'
+	  			ideas are implemented. 
+	  		</div>
+	  	</div>
+	  	<div class="proj-details hidden" id="details-deloitte">
+	  		<i class="material-icons" id="closeBtn" onclick="closeBtnClicked()">
+	  			exit_to_app
+	  		</i>
+	  		<div class="details-pic">
+	  			<iframe id="deloitte-ppt" src="https://docs.google.com/presentation/d/1W3OzZPQNWmrL48EcBemakJFsw1tq5D4Zy6RmiTZw3Jk/embed?start=false&loop=true&delayms=3000" frameborder="0" width="481" height="300" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+	  		</div>
+	  		<div class="details-links">
+	  			Deloitte National Case Competition (2nd Place)
+	  		</div>
+	  		<div class="details-desc">
+	  			This was Deloitte's annual national case competition. 
+	  		</div>
+	  	</div>
+	  	<div class="proj-details hidden" id="details-clearcell">
+	  		<i class="material-icons" id="closeBtn" onclick="closeBtnClicked()">
+	  			exit_to_app
+	  		</i>
+	  		<div class="details-pic">
+	  		</div>
+	  		<div class="details-links">
+	  		</div>
+	  		<div class="details-desc">
+	  		</div>
+	  	</div>
 
 	</div>
   
