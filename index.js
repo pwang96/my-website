@@ -1,38 +1,17 @@
 var toggle = false;
 var isOpen = false;
-var projects = ["measure", "newday", "deloitte", "clearcell"]
-var projOpen = ""
+var projects = ["measure", "newday", "deloitte", "clearcell"];
+var projOpen = "";
+var slideIndex = 1;
+
 
 $(document).ready(function(){
-	closeNav();
-	$("#main").click(function() {
-	closeNav();
-	});
+
 	bindNavItems();
 	bindHoverThumbs();
-	/*bindCloseBtn();*/
+	showDivs(slideIndex);
 });
 
-
-function toggleNav() {
-	if(toggle == false && isOpen==false){openNav();}
-  	else {if(toggle == true && isOpen==true){closeNav();}
-  	}	
-}
-
-function openNav() {
-	document.getElementById("mysidenav").style.width = "250px";
-	document.getElementById("main").style.marginLeft = "250px";
-	toggle = true;
-	isOpen = true;
-}
-
-function closeNav() {
-	document.getElementById("mysidenav").style.width = "50px";
-	document.getElementById("main").style.marginLeft = "50px";
-	toggle = false;
-	isOpen = false;
-}
 
 function changePage(currId) {
 	$("#about, #projects, #resume, #contact").removeClass("selected");
@@ -44,9 +23,11 @@ function changePage(currId) {
 }
 
 function bindNavItems() {
-	$("#about, #projects, #resume, #contact").click(function() {
+	$("[role='navbutton']").click(function() {
+		console.log($(this));
+		$("[role='navbutton']").removeClass("active");
+		$(this).addClass("active");
 		changePage($(this));
-		closeNav();
 	}
 	)
 }
@@ -97,3 +78,24 @@ function closeBtnClicked() {
 function bindCloseBtn() {
 	$("#closeBtn").click(closeBtnClicked());
 }
+
+function plusDivs(n) {
+	showDivs(slideIndex+=n);
+}
+
+function showDivs(n) {
+	var x = document.getElementsByClassName("measure-pics");
+	if (n > x.length) {
+		slideIndex = 1;
+	}
+	if (n < 1) {
+		slideIndex = x.length;
+	}
+	for (var i=0; i<x.length; i++) {
+		x[i].style.display = "none";
+	}
+	x[slideIndex-1].style.display = "block";
+}
+
+
+

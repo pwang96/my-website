@@ -4,42 +4,44 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="index.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="icon" type="image/png" href="pics/favicon-96x96.png">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="index.js"> </script>
   <title>Peter Wang</title>
 </head>
 
 <body>
-	<div class="sidenavbar" id="mysidenav">
-		<div class="togglebtn" id="togglebtn" onclick="toggleNav()">
-			<i class="material-icons w3-xxxlarge" style="font-size: 0.65em;">menu</i>
-		</div> 
-		<div class="navpic">
-			<img src="pics/peter1.jpg" />
-		</div>
-		<a class="navitem selected" id="about" href="#">ABOUT</a>
-		<a class="navitem" id="projects" href="#">PROJECTS</a>
-		<a class="navitem" id="resume" href="#">RESUME</a>
-		<a class="navitem" id="contact" href="#">CONTACT</a>
+	<div class="container-fluid" id="header">
+		<ul class="nav nav-pills nav-justified">
+  			<li role="navbutton" class="active"><a href="#">About</a></li>
+  			<li role="navbutton"><a href="#">Projects</a></li>
+  			<li role="navbutton"><a href="#">Resume</a></li>
+  			<li role="navbutton"><a href="#">Contact</a></li>
+		</ul>
+
 	</div>
-	<div id="main">
-	  	<div class="container about">
+	<div class="container-fluid" id="container">
+		<center>
+		  	<div class="container about">
+		  		<div id="biopic">
+		  			<img src="pics/biopic.jpg"/>
+		  		</div>
 
-			<div id="name">
-				Peter Wang
-			</div>
+				<div id="name">
+					Peter Wang
+				</div>
 
-				<img id="biopic" src="pics/biopic.jpg"/>
-
-			<div id="bio">
-				<p>
-				Hi! I'm a sophomore computer engineer at the University of Maryland
-				College Park. I love solving all kinds of problems, and many of my
-				projects are posted here: feel free to look around and contact me!
-				</p>
-			</div>
-	  	</div>
+				<div id="bio">
+					<p>
+					Hi! I'm a sophomore computer engineer at the University of Maryland
+					College Park. I love solving all kinds of problems, and many of my
+					projects are posted here: feel free to look around and contact me!
+					</p>
+				</div>
+		  	</div>
+		</center>
 
 	  	<div class="container projects hidden">
 
@@ -86,14 +88,16 @@
 			</div>
 	  	</div>
 
-	  	<div class="container resume hidden">
+	  	<center>
+		  	<div class="container resume hidden">
 
-			<div class="resume" id="resume-page">
-				<a id="resume-page"href="pics/PWangOct2016.pdf" target="_blank">
-					<img id="resume-page" src="pics/resume.png" title="Download Resume"/>
-				</a>
-			</div>
-	  	</div>
+				<div class="resume" id="resume-page">
+					<a id="resume-page"href="pics/PWangOct2016.pdf" target="_blank">
+						<img id="resume-page" src="pics/resume.png" title="Download Resume"/>
+					</a>
+				</div>
+		  	</div>
+	  	</center>
 
 	  	<div class="container contact hidden">
 
@@ -112,10 +116,14 @@
 	  	<div class="page-overlay hidden" onclick="closeBtnClicked()"></div>
 	  	<div class="proj-details hidden" id="details-measure">
 	  		<i class="material-icons" id="closeBtn" onclick="closeBtnClicked()">
-	  			exit_to_app
+	  			close
 	  		</i>
 	  		<div class="details-pic">
-
+	  			<img class="measure-pics" src="pics/measure1.png">
+	  			<img class="measure-pics" src="pics/measure2.png">
+	  			<img class="measure-pics" src="pics/measure3.png">
+	  			<i class="material-icons" id="chevron-left" onclick="plusDivs(-1)">chevron_left</i>
+	  			<i class="material-icons" id="chevron-right" onclick="plusDivs(1)">chevron_right</i>
 	  		</div>
 	  		<div class="details-links">
 	  		</div>
@@ -124,7 +132,7 @@
 	  	</div>
 	  	<div class="proj-details hidden" id="details-newday">
 	  		<i class="material-icons" id="closeBtn" onclick="closeBtnClicked()">
-	  			exit_to_app
+	  			close
 	  		</i>
 	  		<div class="details-pic">
 	  			<iframe id="newday-ppt" src="https://docs.google.com/presentation/d/16wC8z32yGyOW7hVouXUBy1-upZ1Pk5D3vfwSX4TkJyw/embed?start=false&loop=true&delayms=3000" frameborder="0" width="480" height="300" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
@@ -140,7 +148,7 @@
 	  	</div>
 	  	<div class="proj-details hidden" id="details-deloitte">
 	  		<i class="material-icons" id="closeBtn" onclick="closeBtnClicked()">
-	  			exit_to_app
+	  			close
 	  		</i>
 	  		<div class="details-pic">
 	  			<iframe id="deloitte-ppt" src="https://docs.google.com/presentation/d/1W3OzZPQNWmrL48EcBemakJFsw1tq5D4Zy6RmiTZw3Jk/embed?start=false&loop=true&delayms=3000" frameborder="0" width="481" height="300" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
@@ -154,7 +162,7 @@
 	  	</div>
 	  	<div class="proj-details hidden" id="details-clearcell">
 	  		<i class="material-icons" id="closeBtn" onclick="closeBtnClicked()">
-	  			exit_to_app
+	  			close
 	  		</i>
 	  		<div class="details-pic">
 	  		</div>
@@ -163,7 +171,6 @@
 	  		<div class="details-desc">
 	  		</div>
 	  	</div>
-
 	</div>
   
 </body>

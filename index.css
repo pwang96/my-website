@@ -8,67 +8,10 @@ body {
 	padding: 0;
 }
 
-.sidenavbar {
-	height: 100%;
-	width: 0; /* will be changed with js */
-	position: fixed;
-	z-index: 1;
-	top: 0;
-	left: 0;
-	background-color: #111;
-	overflow-x: hidden;
-	transition: 0.5s;
-	padding-top: 50px;
-}
-
-.sidenavbar .togglebtn {
-	text-decoration: none;
-	color: white;
-	display: block;
-	position: absolute;
-	cursor: pointer;
-	top: 0;
-	left: 0;
-	font-size: 50px;
-	margin-left: 10px;
-}
-
-.navitem {
-	padding: 8px 8px 8px 32px;
-	text-decoration: none;
-	font-size: 25px;
-	color: #818181;
-	display: block;
-	margin-left: 35px;
-	transition: 0.3s;
-} .selected {
-	color: #FFFFFF;
-	text-decoration: underline;
-}
-
-.sidenavbar a:hover{
-	color: #f1f1f1;
-} 
-
-.navpic {
-	margin-left: 80px;
-	border-radius: 50%;
-	overflow: hidden;
-	width: 100px;
-	height: 100px;
-}
-
-.round img {
-	display: block;
-	min-width: 100%;
-	min-height: 100%;
-}
-
 #main {
 	transition: margin-left .5s;
 	/*background-image: url("pics/school.png");*/
 	position: relative;
-	padding: 20px;
 	height: 100%;
 }
 
@@ -78,23 +21,18 @@ body {
 	height: 100%;
 }
 .container.about {
-	margin-left: 10%;
-	margin-top: 5%;
-	padding-top: 5%;
-	width: 50%;
+	width: 80%;
 	height: auto;
-	font-weight: 300;
-	font-size: 4.2em;
-	color: #52B0FF;
 }
 
 #name {
 	padding: 20px 20px 20px 20px;
+	color: #52B0FF;
+	font-weight: 300;
+	font-size: 4.2em;
 }
 
 #bio {
-	margin-left: 10%;
-	padding-top: 5%;
 	font-size: 20px;
 	color: #000000;
 	width: 60%;
@@ -105,9 +43,8 @@ body {
 	display: block;
 	margin: 20px 20px 20px 20px;
 	width: 300px;
-	left: 75%;
 	padding-bottom: 10%;
-	top: 28px;
+	top: 10%;
 }
 
 #biopic img {
@@ -250,7 +187,7 @@ ul {
 
 /* project details */
 .proj-details {
-	position: fixed;
+	position: absolute;
 	top: 0;
 	right: 25%;
 	width: 600px;
@@ -298,6 +235,25 @@ ul {
 #newday-ppt, #deloitte-ppt {
 	position: absolute;
 	left: 60px;
+}
+
+.measure-pics {
+	width: 580px;
+	height: auto;
+}
+
+#chevron-left {
+	font-size: 36px;
+	top: 45%;
+	left: 0;
+	cursor: pointer;
+}
+
+#chevron-right {
+	font-size: 36px;
+	top: 45%;
+	right: 0;
+	cursor: pointer;
 }
 
 .hidden {
