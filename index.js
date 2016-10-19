@@ -2,6 +2,10 @@ var toggle = false;
 var isOpen = false;
 var projects = ["measure", "newday", "deloitte", "clearcell"];
 var projOpen = "";
+var backgrounds = {"about":"url(pics/umd2.jpg)",
+				   "projects":"url(pics/weather.png)",
+				   "resume":"url(pics/umd2.jpg)",
+				   "contact":"url(pics/umd2.jpg)"}
 var slideIndex = 1;
 
 
@@ -9,7 +13,8 @@ $(document).ready(function(){
 
 	bindNavItems();
 	bindHoverThumbs();
-	showDivs(slideIndex);
+	showSlides(0);
+
 });
 
 
@@ -20,6 +25,16 @@ function changePage(currId) {
 	var currContainer = currId.text().toLowerCase();
 	$(".container").addClass("hidden");
 	$(".".concat(currContainer)).removeClass("hidden");
+	if (currContainer == "projects") {
+		$(document.body).css('background-image', backgrounds[currContainer]);
+		$(document.body).css('background-repeat', "repeat");
+		$(document.body).css('background-size', "auto auto");
+
+	} else {
+		$(document.body).css('background-image', backgrounds[currContainer]);
+		$(document.body).css('background-repeat', "no-repeat");
+		$(document.body).css('background-size', "cover");
+	}
 }
 
 function bindNavItems() {
@@ -35,7 +50,7 @@ function bindNavItems() {
 function hoverIn(i) {
 	return function() {
 		var currentOverlay = "#thumb-".concat(projects[i]);
-		$(currentOverlay.concat(" .thumb-overlay hidden")).removeClass("hidden");
+		$(currentOverlay.concat(" .thumb-overlay.hidden")).removeClass("hidden");
 		$(currentOverlay.concat(" .thumb-overlay")).fadeTo(300, 0.75);
 	}
 }
@@ -79,23 +94,17 @@ function bindCloseBtn() {
 	$("#closeBtn").click(closeBtnClicked());
 }
 
-function plusDivs(n) {
-	showDivs(slideIndex+=n);
+function plusSlides(n) {
+	showSlides(slideIndex += n);
 }
 
-function showDivs(n) {
-	var x = document.getElementsByClassName("measure-pics");
-	if (n > x.length) {
-		slideIndex = 1;
+function showSlides(n) {
+	var i;
+	var slides = document.getElementsByClassName("measure-pic");
+	if (n > slides.length) {slideIndex = 1}
+	if (n < 1) {slideIndex = slides.length}
+	for (i=0; i<slides.length; i++) {
+		slides[i].style.display = "none";
 	}
-	if (n < 1) {
-		slideIndex = x.length;
-	}
-	for (var i=0; i<x.length; i++) {
-		x[i].style.display = "none";
-	}
-	x[slideIndex-1].style.display = "block";
-}
-
-
-
+	slides[slideIndex-1].style.display = "block"
+;}

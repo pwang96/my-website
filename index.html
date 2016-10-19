@@ -14,7 +14,7 @@
 
 <body>
 	<div class="container-fluid" id="header">
-		<ul class="nav nav-pills nav-justified">
+		<ul class="nav nav-pills nav-justified" id="navlist">
   			<li role="navbutton" class="active"><a href="#">About</a></li>
   			<li role="navbutton"><a href="#">Projects</a></li>
   			<li role="navbutton"><a href="#">Resume</a></li>
@@ -23,25 +23,29 @@
 
 	</div>
 	<div class="container-fluid" id="container">
+
+
+
 		<center>
 		  	<div class="container about">
-		  		<div id="biopic">
-		  			<img src="pics/biopic.jpg"/>
-		  		</div>
+		  		<div class="row">
+			  		<div class="col-sm-4" id="biopic">
+			  			<img src="pics/biopic.jpg"/>
+			  		</div>
 
-				<div id="name">
-					Peter Wang
-				</div>
-
-				<div id="bio">
-					<p>
-					Hi! I'm a sophomore computer engineer at the University of Maryland
-					College Park. I love solving all kinds of problems, and many of my
-					projects are posted here: feel free to look around and contact me!
-					</p>
+					<div class="col-sm-8" id="name">
+						Peter Wang
+						<p id="bio">
+						Hi! I'm a sophomore computer engineer at the University of Maryland
+						College Park. I love solving all kinds of problems, and many of my
+						projects are posted here: feel free to look around and contact me!
+						</p>
+					</div>
 				</div>
 		  	</div>
 		</center>
+
+
 
 	  	<div class="container projects hidden">
 
@@ -62,6 +66,7 @@
 					<div class="thumb-overlay hidden">
 						<div class="title">MEASURE</div>
 						<div class="type">TECH</div>
+						<div class="date">2015-8-19</div>
 					</div>
 				</div>
 				<div class="thumb" id="thumb-newday">
@@ -69,6 +74,7 @@
 					<div class="thumb-overlay hidden">
 						<div class="title">NewDayUSA Case Competition</div>
 						<div class="type">BUSINESS</div>
+						<div class="date">2015-4-20</div>
 					</div>
 				</div>
 				<div class="thumb" id="thumb-deloitte">
@@ -76,6 +82,7 @@
 					<div class="thumb-overlay hidden">
 						<div class="title">Deloitte Case Competition</div>
 						<div class="type">BUSINESS</div>
+						<div class="date">2015-2-10</div>
 					</div>
 				</div>
 				<div class="thumb" id="thumb-clearcell">
@@ -83,10 +90,13 @@
 					<div class="thumb-overlay hidden">
 						<div class="title">ClearCell</div>
 						<div class="type">TECH</div>
+						<div class="date">2015-9-19</div>
 					</div>
 				</div>
 			</div>
 	  	</div>
+
+
 
 	  	<center>
 		  	<div class="container resume hidden">
@@ -99,19 +109,24 @@
 		  	</div>
 	  	</center>
 
-	  	<div class="container contact hidden">
 
-			<div class="contactme" id="contact-head">
-				Don't hesistate to reach out to me!
-			</div>
-			<div class="contactme" id="contact-phone">
-				<b>Cell:</b> (908)-392-5806
-			</div>
-			<div class="contactme" id="contact-email">
-				<b>Email:</b> 
-				<a href="mailto:96pwang@gmail.com" target="_top"> 96pwang@gmail.com </a>
-			</div>
-	  	</div>
+
+	  	<center>
+		  	<div class="container contact hidden">
+
+				<div class="contactme" id="contact-head">
+					Don't hesistate to reach out to me!
+				</div>
+				<div class="contactme" id="contact-info">
+					<b>Cell:</b> (908)-392-5806
+					 &nbsp;&nbsp; | &nbsp;&nbsp;
+					<b>Email:</b> 
+					<a href="mailto:96pwang@gmail.com" target="_top"> 96pwang@gmail.com </a>
+				</div>
+		  	</div>
+	  	</center>
+
+
 
 	  	<div class="page-overlay hidden" onclick="closeBtnClicked()"></div>
 	  	<div class="proj-details hidden" id="details-measure">
@@ -119,13 +134,21 @@
 	  			close
 	  		</i>
 	  		<div class="details-pic">
-	  			<img class="measure-pics" src="pics/measure1.png">
-	  			<img class="measure-pics" src="pics/measure2.png">
-	  			<img class="measure-pics" src="pics/measure3.png">
-	  			<i class="material-icons" id="chevron-left" onclick="plusDivs(-1)">chevron_left</i>
-	  			<i class="material-icons" id="chevron-right" onclick="plusDivs(1)">chevron_right</i>
+	  			<center>
+	  				<div>
+		  				<img class="measure-pic" src="pics/measure1.png" />
+		  				<img class="measure-pic" src="pics/measure2.png" />
+		  				<img class="measure-pic" src="pics/measure3.png" />
+		  				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	  					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+  					</div>
+	  			</center>
 	  		</div>
 	  		<div class="details-links">
+	  			MEASURE
+	  			<a href="https://github.com/pwang96/MEASURE" target="_blank">
+	  				<img src="pics/github_icon.png"/>
+	  			</a>
 	  		</div>
 	  		<div class="details-desc">
 	  		</div>
@@ -167,8 +190,10 @@
 	  		<div class="details-pic">
 	  		</div>
 	  		<div class="details-links">
+	  			ClearCell Project
 	  		</div>
 	  		<div class="details-desc">
+	  			This was a project I did for my CMSC132 Class. 
 	  		</div>
 	  	</div>
 	</div>
