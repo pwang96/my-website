@@ -2,6 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name=viewport content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="index.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -14,7 +15,7 @@
 
 <body>
 	<div class="container-fluid" id="header">
-		<ul class="nav nav-pills nav-justified" id="navlist">
+		<ul class="nav nav-pills nav-justified mynav" id="navlist">
   			<li role="navbutton" class="active"><a href="#">About</a></li>
   			<li role="navbutton"><a href="#">Projects</a></li>
   			<li role="navbutton"><a href="#">Resume</a></li>
@@ -30,7 +31,7 @@
 		  	<div class="container about">
 		  		<div class="row">
 			  		<div class="col-sm-4" id="biopic">
-			  			<img src="pics/biopic.jpg"/>
+			  			<!--<img src="pics/biopic.jpg"/>*/-->
 			  		</div>
 
 					<div class="col-sm-8" id="name">
@@ -147,10 +148,13 @@
 	  		<div class="details-links">
 	  			MEASURE
 	  			<a href="https://github.com/pwang96/MEASURE" target="_blank">
-	  				<img src="pics/github_icon.png"/>
+	  				<img src="pics/github_icon.svg"/>
 	  			</a>
 	  		</div>
 	  		<div class="details-desc">
+	  			MEASURE is a program written in Python that automates and simplifies the mass calibration process. MEASURE was started by Alexander Moses and continued by Peter Wang. The mass calibration process is a lengthy process that NIST follows to calibrate customer weights, using NIST’s internal weights, which are traceable back to the International Prototype Kilogram (IPK) in Paris. 
+	  			MEASURE provides a GUI (graphical user interface) that allows the metrologists to conduct a calibration much more easily. MEASURE also includes a MySql database interface, where comparator information, thermometer info, NIST weight info, customer weight info, and much more, are all stored. MEASURE allows metrologists to easily pick which weights they want to calibrate, how they want to calibrate them, and on which balance the weights should be calibrated on. Once all the settings are chosen, MEASURE will then communicate with the comparator through a COM port and automatically compare the weights with each other. At the same time, MEASURE communicates with the thermometer, hygrometer, and barometer to get environmental readings at set intervals.
+	  			Upon finishing, an output file will automatically be generated. 
 	  		</div>
 	  	</div>
 	  	<div class="proj-details hidden" id="details-newday">

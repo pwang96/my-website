@@ -17,6 +17,11 @@ body {
 	height: 100%;
 }
 
+.mynav {
+	font-size: 1.2em;
+	letter-spacing: 1px;
+}
+
 .container {
 	position: relative;
 	width: 100%;
@@ -236,6 +241,7 @@ ul {
 	max-height: 30px;
 	padding: 0px 10px 10px 10px;
 	font-weight: bold;
+	text-align: center;
 }
 
 .details-links img {
@@ -250,6 +256,7 @@ ul {
 	top: 395px;
 	width: 580px;
 	height: 300px;
+	margin-bottom: 20px;
 	padding: 0px 10px 0px 10px;
 	text-indent: 5em;
 }
