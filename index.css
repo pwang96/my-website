@@ -38,8 +38,7 @@ body {
 	color: #52B0FF;
 	font-weight: 300;
 	font-size: 4.2em;
-	left: 30%;
-	top: 25%;
+	top: 20%;
 }
 
 #bio {
@@ -54,7 +53,8 @@ body {
 	margin: 20px 20px 20px 20px;
 	width: 300px;
 	padding-bottom: 10%;
-	top: 10%;
+	left: 55%;
+	top: 5%;
 }
 
 #biopic img {
@@ -113,21 +113,21 @@ ul {
 	position: relative;
 	float: left;
 	margin: 10px 10px 10px 10px;
-	width: 300px;
-	height: 300px;
+	width: 280px;
+	height: 280px;
 	cursor: pointer;
 }
 
 .thumb-pic{
-	width: 300px;
-	height: 300px;
+	width: 280px;
+	height: 280px;
 }
 
 .thumb-overlay {
 	float: left;
 	position: absolute;
-	width: 300px;
-	height: 300px;
+	width: 280px;
+	height: 280px;
 	top: 0;
 	background-color: #004785;
 	opacity: 0;
