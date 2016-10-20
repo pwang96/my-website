@@ -30,6 +30,7 @@ body {
 .container.about {
 	width: 80%;
 	height: auto;
+	margin: auto;
 }
 
 #name {
@@ -39,6 +40,7 @@ body {
 	font-weight: 300;
 	font-size: 4.2em;
 	top: 20%;
+	right: 10%;
 }
 
 #bio {
@@ -50,11 +52,11 @@ body {
 #biopic {
 	position: absolute;
 	display: block;
-	margin: 20px 20px 20px 20px;
 	width: 300px;
-	padding-bottom: 10%;
 	left: 55%;
 	top: 5%;
+	max-width: 100%;
+	height: auto;
 }
 
 #biopic img {
@@ -180,13 +182,14 @@ ul {
 
 #contact-info {
 	position: relative;
-	top: 100px;
+	top: 90px;
 }
 
-.contactme a:hover{
-	color: cyan;
+#contact-info img {
+	padding-top: 5px;
+	max-width: 50px;
+	max-height: 50px;
 }
-
 
 /* page overlay */
 .page-overlay {
