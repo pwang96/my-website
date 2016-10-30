@@ -61,12 +61,20 @@
 				</ul>
 			</div>
 			<div id="projects-body">
+				<div class="thumb" id="thumb-leaguerec">
+					<img src="pics/leaguerec.png" class="thumb-pic"/>
+					<div class="thumb-overlay hidden">
+						<div class="title">League Champion Recommender</div>
+						<div class="type">TECH</div>
+						<div class="date">2016-10-30</div>
+					</div>
+				</div>
 				<div class="thumb" id="thumb-measure">
 					<img src="pics/measure.png" class="thumb-pic"/>
 					<div class="thumb-overlay hidden">
 						<div class="title">MEASURE</div>
 						<div class="type">TECH</div>
-						<div class="date">2015-8-19</div>
+						<div class="date">2016-8-19</div>
 					</div>
 				</div>
 				<div class="thumb" id="thumb-newday">
@@ -74,7 +82,7 @@
 					<div class="thumb-overlay hidden">
 						<div class="title">NewDayUSA Case Competition</div>
 						<div class="type">BUSINESS</div>
-						<div class="date">2015-4-20</div>
+						<div class="date">2016-4-20</div>
 					</div>
 				</div>
 				<div class="thumb" id="thumb-deloitte">
@@ -82,7 +90,7 @@
 					<div class="thumb-overlay hidden">
 						<div class="title">Deloitte Case Competition</div>
 						<div class="type">BUSINESS</div>
-						<div class="date">2015-2-10</div>
+						<div class="date">2016-2-10</div>
 					</div>
 				</div>
 				<div class="thumb" id="thumb-clearcell">
@@ -90,7 +98,7 @@
 					<div class="thumb-overlay hidden">
 						<div class="title">ClearCell</div>
 						<div class="type">TECH</div>
-						<div class="date">2015-9-19</div>
+						<div class="date">2016-9-19</div>
 					</div>
 				</div>
 				<div class="thumb" id="thumb-linkedlist">
@@ -98,7 +106,7 @@
 					<div class="thumb-overlay hidden">
 						<div class="title">Linked List</div>
 						<div class="type">TECH</div>
-						<div class="date">2015-10-10</div>
+						<div class="date">2016-10-10</div>
 					</div>
 				</div>
 			</div>
@@ -150,6 +158,26 @@
 
 
 	  	<div class="page-overlay hidden" onclick="closeBtnClicked()"></div>
+	  	<div class="proj-details hidden" id="details-leaguerec">
+	  		<i class="material-icons" id="closeBtn" onclick="closeBtnClicked()">
+	  			close
+	  		</i>
+	  		<div class="details-pic">
+	  			
+	  		</div>
+	  		<div class="details-links">
+	  			League Champion Recommender 
+	  			<a href="https://github.com/pwang96/LeagueRec" target="_blank">
+	  				<img src="pics/github_icon.svg"/>
+	  			</a>
+	  		</div>
+	  		<div class="details-desc">
+	  			This web application uses machine learning (scikit-learn) to predict which League of Legends champions a player would enjoy playing, based on playstyle history. League of Legends, created by Riot Games is the most played PC game in North America and Europe, where players control a different champion every game. Currently there are 133 champions (new champions are being created every few months).
+	  			&nbsp;This web app is powered entirely by the Django web framework for Python. When a username is entered into the site, the Riot API to get stats about the player, some of which I display on the results page. The data is parsed, and then I find a few hundred players around the same ELO as the user. I create a matrix for each player that describes their champion playstyle, and I use cosine similarity to determine which players are most similar.
+	  			&nbsp;Afterwards, I look for common champions in the players who are most similar, and I recommend three of them.
+	  			&nbsp;I created this app because I'm a big fan of the game, but also because I wanted to get some experience with full stack web development. 
+	  		</div>
+	  	</div>
 	  	<div class="proj-details hidden" id="details-measure">
 	  		<i class="material-icons" id="closeBtn" onclick="closeBtnClicked()">
 	  			close
@@ -173,8 +201,8 @@
 	  		</div>
 	  		<div class="details-desc">
 	  			MEASURE is a program written in Python that automates and simplifies the mass calibration process. MEASURE was started by Alexander Moses and continued by Peter Wang. The mass calibration process is a lengthy process that NIST follows to calibrate customer weights, using NIST’s internal weights, which are traceable back to the International Prototype Kilogram (IPK) in Paris. 
-	  			MEASURE provides a GUI (graphical user interface) that allows the metrologists to conduct a calibration much more easily. MEASURE also includes a MySql database interface, where comparator information, thermometer info, NIST weight info, customer weight info, and much more, are all stored. MEASURE allows metrologists to easily pick which weights they want to calibrate, how they want to calibrate them, and on which balance the weights should be calibrated on. Once all the settings are chosen, MEASURE will then communicate with the comparator through a COM port and automatically compare the weights with each other. At the same time, MEASURE communicates with the thermometer, hygrometer, and barometer to get environmental readings at set intervals.
-	  			Upon finishing, an output file will automatically be generated. 
+	  			&nbsp;MEASURE provides a GUI (graphical user interface) that allows the metrologists to conduct a calibration much more easily. MEASURE also includes a MySql database interface, where comparator information, thermometer info, NIST weight info, customer weight info, and much more, are all stored. MEASURE allows metrologists to easily pick which weights they want to calibrate, how they want to calibrate them, and on which balance the weights should be calibrated on. Once all the settings are chosen, MEASURE will then communicate with the comparator through a COM port and automatically compare the weights with each other. At the same time, MEASURE communicates with the thermometer, hygrometer, and barometer to get environmental readings at set intervals.
+	  			&nbsp;Upon finishing, an output file will automatically be generated. 
 	  		</div>
 	  	</div>
 	  	<div class="proj-details hidden" id="details-newday">
