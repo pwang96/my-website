@@ -1,6 +1,6 @@
 var toggle = false;
 var isOpen = false;
-var projects = ["leaguerec", "measure", "newday", "deloitte", "clearcell", "linkedlist"];
+var projects = ["visualizer", "leaguerec", "measure", "newday", "deloitte", "clearcell", "linkedlist"];
 var projOpen = "";
 var backgrounds = {"about":"url(pics/umd2.jpg)",
 				   "projects":"url(pics/weather.png)",
@@ -9,7 +9,7 @@ var backgrounds = {"about":"url(pics/umd2.jpg)",
 var slideIndex = 1;
 
 
-$(document).ready(function(){
+$(function(){
 
 	bindNavItems();
 	bindHoverThumbs();
@@ -83,9 +83,9 @@ function bindHoverThumbs() {
 }
 
 function closeBtnClicked() {
-	$(".page-overlay").fadeTo(300, 0);
+	$(".page-overlay").fadeTo(500, 0);
 	$(".page-overlay").addClass("hidden");
-	$("#details-".concat(projOpen)).fadeTo(300, 0);
+	$("#details-".concat(projOpen)).fadeOut(300);
 	$("#details-".concat(projOpen)).addClass("hidden");
 	console.log(projOpen);
 }

@@ -61,6 +61,14 @@
 				</ul>
 			</div>
 			<div id="projects-body">
+				<div class="thumb" id="thumb-visualizer">
+					<img src="pics/visualizer.png" class="thumb-pic"/>
+					<div class="thumb-overlay hidden">
+						<div class="title">Music Visualizer</div>
+						<div class="type">TECH</div>
+						<div class="date">2016-11-30</div>
+					</div>
+				</div>
 				<div class="thumb" id="thumb-leaguerec">
 					<img src="pics/leaguerec.png" class="thumb-pic"/>
 					<div class="thumb-overlay hidden">
@@ -118,7 +126,7 @@
 		  	<div class="container-fluid container resume hidden">
 
 				<div class="resume" id="resume-page">
-					<a id="resume-page"href="pics/PWangOct2016.pdf" target="_blank">
+					<a id="resume-page"href="pics/resume.pdf" target="_blank">
 						<img id="resume-page" src="pics/resume.png" title="Download Resume"/>
 					</a>
 				</div>
@@ -158,6 +166,29 @@
 
 
 	  	<div class="page-overlay hidden" onclick="closeBtnClicked()"></div>
+		<div class="proj-details hidden" id="details-visualizer">
+	  		<i class="material-icons" id="closeBtn" onclick="closeBtnClicked()">
+	  			close
+	  		</i>
+	  		<div class="details-pic">
+	  			
+	  		</div>
+	  		<div class="details-links">
+	  			Music Visualizer
+	  			<a href="https://github.com/pwang96/audiovisualizer" target="_blank">
+	  				<img src="pics/github_icon.svg"/>
+	  			</a>
+	  		</div>
+	  		<div class="details-desc">
+	  			I created thiw web app with a friend because we both love music. While there are many different audio visualizers
+				  out there, we wanted to make a unique, interactive music visualizer. Our 3D visualizer is implemented only using
+				  Javascript (and jQuery). In particular, we used three.js for the animations. Much like other visualizers, we 
+				  used the Fast Fourier Transform of the song to drive the animations. The size of the spheres depends on the amplitude
+				  of the FFT, whereas the color of the spheres depend on the overall "flavor" of the song, which also depends on 
+				  which frequencies are present. 
+	  		</div>
+	  	</div>
+
 	  	<div class="proj-details hidden" id="details-leaguerec">
 	  		<i class="material-icons" id="closeBtn" onclick="closeBtnClicked()">
 	  			close
@@ -178,6 +209,7 @@
 	  			&nbsp;I created this app because I'm a big fan of the game, but also because I wanted to get some experience with full stack web development. 
 	  		</div>
 	  	</div>
+
 	  	<div class="proj-details hidden" id="details-measure">
 	  		<i class="material-icons" id="closeBtn" onclick="closeBtnClicked()">
 	  			close
@@ -205,6 +237,7 @@
 	  			&nbsp;Upon finishing, an output file will automatically be generated. 
 	  		</div>
 	  	</div>
+
 	  	<div class="proj-details hidden" id="details-newday">
 	  		<i class="material-icons" id="closeBtn" onclick="closeBtnClicked()">
 	  			close
@@ -221,6 +254,7 @@
 	  			ideas are implemented. 
 	  		</div>
 	  	</div>
+
 	  	<div class="proj-details hidden" id="details-deloitte">
 	  		<i class="material-icons" id="closeBtn" onclick="closeBtnClicked()">
 	  			close
@@ -235,6 +269,7 @@
 	  			This was Deloitte's annual national case competition. 
 	  		</div>
 	  	</div>
+
 	  	<div class="proj-details hidden" id="details-clearcell">
 	  		<i class="material-icons" id="closeBtn" onclick="closeBtnClicked()">
 	  			close
@@ -248,6 +283,7 @@
 	  			This was a project I did for my CMSC132 Class. 
 	  		</div>
 	  	</div>
+
 	  	<div class="proj-details hidden" id="details-linkedlist">
 	  		<i class="material-icons" id="closeBtn" onclick="closeBtnClicked()">
 	  			close
