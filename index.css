@@ -28,9 +28,12 @@ body {
 	height: 100%;
 }
 .container.about {
-	width: 80%;
 	height: auto;
 	margin: auto;
+}
+
+#jumbo {
+	background: rgba(220, 220, 220, 0.6);
 }
 
 #name {
@@ -39,8 +42,6 @@ body {
 	color: #52B0FF;
 	font-weight: 300;
 	font-size: 4.2em;
-	top: 20%;
-	right: 10%;
 }
 
 #bio {
@@ -50,11 +51,8 @@ body {
 }
 
 #biopic {
-	position: absolute;
 	display: block;
 	width: 300px;
-	left: 55%;
-	top: 5%;
 	max-width: 100%;
 	height: auto;
 }
