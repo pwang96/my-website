@@ -163,6 +163,11 @@ ul {
 	font-weight: bold;
 }
 /* contact page */
+#jumbo-contact {
+	top: 5%;
+	background: rgba(220, 220, 220, 0.6);
+}
+
 .contactme {
 	height: 50px;
 	width: 500px;
@@ -173,15 +178,9 @@ ul {
 	color: #52B0FF;
 }
 #contact-head {
-	position: relative;
 	font-weight: bold;
-	top: 80px;
 }
 
-#contact-info {
-	position: relative;
-	top: 90px;
-}
 
 #contact-info img {
 	padding-top: 5px;
