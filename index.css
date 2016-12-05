@@ -38,7 +38,6 @@ body {
 
 #name {
 	position: relative;
-	padding: 20px 20px 20px 20px;
 	color: #52B0FF;
 	font-weight: 300;
 	font-size: 4.2em;
@@ -52,7 +51,8 @@ body {
 
 #biopic {
 	display: block;
-	width: 300px;
+	top: 20px;
+	width: 240px;
 	max-width: 100%;
 	height: auto;
 }
@@ -244,11 +244,15 @@ ul {
 	text-align: center;
 }
 
-.details-links img {
-	max-width: 30px;
-	max-height: 30px;
+#proj-links {
 	position: absolute;
 	right: 10px;
+	bottom: 5px;
+}
+
+#proj-links img {
+	max-width: 30px;
+	max-height: 30px;
 }
 
 .details-desc {

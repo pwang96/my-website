@@ -37,7 +37,7 @@
 								projects are posted here: feel free to look around and contact me!
 								</p>
 							</div>
-							<div class="col-sm-4" id="biopic">
+							<div class="col-sm-4 hidden-sm" id="biopic">
 			  					<img class="img-responsive" src="pics/biopic.png"/>
 			  				</div>
 						</div>
@@ -48,7 +48,7 @@
 
 
 
-	  	<div class="container-fluid container projects hidden">
+	  	<div class="container projects hidden">
 		<center>
 			<div id="projects-header">
 				Projects List
@@ -194,12 +194,17 @@
 	  		</div>
 	  		<div class="details-links">
 	  			Music Visualizer
-	  			<a href="https://github.com/pwang96/audiovisualizer" target="_blank">
-	  				<img src="pics/github_icon.svg"/>
-	  			</a>
+				  <div id="proj-links">
+					<a href="https://github.com/pwang96/audiovisualizer" target="_blank">
+						<img src="pics/github_icon.svg"/>
+					</a>
+					<a href="https://atomaudioviz.herokuapp.com/" target="_blank">
+						<img src="pics/heroku.png"/>
+					</a>
+				  </div>
 	  		</div>
 	  		<div class="details-desc">
-	  			I created thiw web app with a friend because we both love music. While there are many different audio visualizers
+	  			I created this web app with a friend because we both love music. While there are many different audio visualizers
 				  out there, we wanted to make a unique, interactive music visualizer. Our 3D visualizer is implemented only using
 				  Javascript (and jQuery). In particular, we used three.js for the animations. Much like other visualizers, we 
 				  used the Fast Fourier Transform of the song to drive the animations. The size of the spheres depends on the amplitude
@@ -217,9 +222,11 @@
 	  		</div>
 	  		<div class="details-links">
 	  			League Champion Recommender 
-	  			<a href="https://github.com/pwang96/LeagueRec" target="_blank">
-	  				<img src="pics/github_icon.svg"/>
-	  			</a>
+				  <div id="proj-links">
+					<a href="https://github.com/pwang96/LeagueRec" target="_blank">
+						<img src="pics/github_icon.svg"/>
+					</a>
+				  </div>
 	  		</div>
 	  		<div class="details-desc">
 	  			This web application uses machine learning (scikit-learn) to predict which League of Legends champions a player would enjoy playing, based on playstyle history. League of Legends, created by Riot Games is the most played PC game in North America and Europe, where players control a different champion every game. Currently there are 133 champions (new champions are being created every few months).
@@ -246,9 +253,11 @@
 	  		</div>
 	  		<div class="details-links">
 	  			MEASURE
-	  			<a href="https://github.com/pwang96/MEASURE" target="_blank">
-	  				<img src="pics/github_icon.svg"/>
-	  			</a>
+				  <div id="proj-links">
+					<a href="https://github.com/pwang96/MEASURE" target="_blank">
+						<img src="pics/github_icon.svg"/>
+					</a>
+				  </div>
 	  		</div>
 	  		<div class="details-desc">
 	  			MEASURE is a program written in Python that automates and simplifies the mass calibration process. MEASURE was started by Alexander Moses and continued by Peter Wang. The mass calibration process is a lengthy process that NIST follows to calibrate customer weights, using NIST’s internal weights, which are traceable back to the International Prototype Kilogram (IPK) in Paris. 
